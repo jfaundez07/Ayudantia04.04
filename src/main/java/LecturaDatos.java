@@ -13,7 +13,7 @@ public class LecturaDatos {
     }
 
     public static int stringToIng(String texto) {
-        return Integer.parseInt(texto);
+        return //string en entero;
     }
 
 }
