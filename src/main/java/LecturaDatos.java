@@ -4,9 +4,8 @@ import java.util.Scanner;
 public class LecturaDatos {
 
     public static void main(String[] args) {
-        System.out.println("Ingrese un entero: ");
-        int entero = leerEntero();
-        System.out.println("No se cayo el programa");
+        stringToIng("a");
+        System.out.println("no se cayo");
     }
 
     public static Scanner leer = new Scanner(System.in);
@@ -23,12 +22,19 @@ public class LecturaDatos {
         return 0;
     }
 
-    public static String leerString() {
+    public static String leerString() { //no requiere manejo de excepcion.
         return leer.next();
     }
 
-   // public static int stringToIng(String texto) {
-     //   return //string en entero;
-    //}
+   public static int stringToIng(String texto) {
+        try {
+            return Integer.parseInt(texto);
+        } catch (NumberFormatException e) {
+            System.out.println("Tipo de dato incorrecto, expecion: " + e.getMessage());
+        }
+        return 0;
+    }
+    // NumberFormatException
+
 
 }
